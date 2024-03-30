@@ -1,6 +1,6 @@
 configuration {
     modes: "window,drun,run,ssh";
-	  font: "FiraCode 16";
+	  font: "FiraCode 12";
     display-drun: "Applications";
 
   timeout {
@@ -50,6 +50,7 @@ window {
     background-color: rgba(13, 12, 22, 100 %);
     border:           3;
     padding:          5;
+    width:           60%;
 }
 mainbox {
     border:  0;
@@ -69,11 +70,11 @@ listview {
     border-color: @separatorcolor;
     spacing:      2px ;
     scrollbar:    false;
-    padding:      2px 0px 0px ;
+    padding:      1px 0px 0px ;
 }
 element {
     border:  0;
-    padding: 3px ;
+    padding: 1px ;
 }
 element-text {
     background-color: inherit;
