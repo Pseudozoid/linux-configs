@@ -7,7 +7,7 @@
     // Choose the order of the modules
     "modules-left": ["hyprland/workspaces"],
     "modules-center": ["clock"],
-    "modules-right": ["pulseaudio", "network", "memory", "battery"],
+    "modules-right": ["pulseaudio", "custom/waybar-media", "network", "memory", "battery"],
     // Modules configuration
     "hyprland/workspaces": {
         "disable-scroll": true,
@@ -79,6 +79,14 @@
         },
         "tooltip-format": "MPD (connected)",
         "tooltip-format-disconnected": "MPD (disconnected)"
+    },
+    "custom/waybar-media": {
+        "return-type": "json",
+        "exec": "waybar-media.py status",
+        "on-click": "waybar-media.py playpause",
+        "on-scroll-up": "waybar-media.py previous",
+        "on-scroll-down": "waybar-media.py next",
+        "escape": true
     },
     "idle_inhibitor": {
         "format": "{icon}",
