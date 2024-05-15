@@ -299,3 +299,10 @@ label:focus {
 #privacy-item.audio-out {
     background-color: #0069d4;
 }
+
+#custom-nowplaying {
+    color: #0d0c16;
+    font-family: "FiraCode";
+    padding-top: 3px;
+    padding-right: 3px;
+}
