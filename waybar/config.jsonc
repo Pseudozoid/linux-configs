@@ -80,14 +80,6 @@
         "tooltip-format": "MPD (connected)",
         "tooltip-format-disconnected": "MPD (disconnected)"
     },
-    "custom/waybar-media": {
-        "return-type": "json",
-        "exec": "waybar-media.py status",
-        "on-click": "waybar-media.py playpause",
-        "on-scroll-up": "waybar-media.py previous",
-        "on-scroll-down": "waybar-media.py next",
-        "escape": true
-    },
     "idle_inhibitor": {
         "format": "{icon}",
         "format-icons": {
@@ -175,6 +167,6 @@
 	"exec": "playerctl metadata --format \"{{ title }}\" --ignore-player=firefox",
 	"format": "🎜 {}",
         "max-length": 30,
-        },
+    	"on-click": "playerctl play-pause --ignore-player=firefox" 
     }
 }
