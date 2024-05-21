@@ -5,8 +5,8 @@
 }
 
 window#waybar {
-    background-color: rgb(132, 121, 224);
-    border-bottom: 2px solid rgb(132, 121, 224);
+    background-color: #282828;
+    border-bottom: 2px solid #282828;
     color: #ffffff;
     transition-property: background-color;
     transition-duration: .5s;
@@ -50,20 +50,22 @@ button:hover {
 #workspaces button {
     padding: 0 5px;
     background-color: transparent;
-    color: rgb(13, 12, 22);
+    color: #EBDBB2;
 }
 
 #workspaces button:hover {
-    background:rgba(79, 73, 134, 0.4);
+    background:rgba(192, 170, 132, 0.1);
+    box-shadow: inherit;
+    text-shadow: inherit;
 }
 
 #workspaces button.active {
-    background-color: rgba(79, 73, 134, 0.4);
-    box-shadow: inset 0 -2px #201d36;
+    background-color: rgba(192, 170, 132, 0.2);
+    box-shadow: inset 0 -2px #EBDBB2;
 }
 
 #workspaces button.urgent {
-    background-color: #eb4d4b;
+    background-color: #EA6962;
 }
 
 #mode {
@@ -88,7 +90,7 @@ button:hover {
 #scratchpad,
 #mpd {
     padding: 0 10px;
-    color: #0d0c16;
+    color: #EBDBB2;
 }
 
 #window,
@@ -107,17 +109,17 @@ button:hover {
 }
 
 #clock {
-    background-color: rgb(132, 121, 224);
+    background-color: #282828;
 }
 
 #battery {
-    background-color: rgb(132, 121, 224);
-    color: #0d0c16;
+    background-color: #282828;
+    color: #EBDBB2;
 }
 
 #battery.charging, #battery.plugged {
-    color: #0d0c16;
-    background-color: rgb(132, 121, 224);
+    color: #EBDBB2;
+    background-color: #282828;
 }
 
 @keyframes blink {
@@ -129,8 +131,8 @@ button:hover {
 
 /* Using steps() instead of linear as a timing function to limit cpu usage */
 #battery.critical:not(.charging) {
-    background-color: #f53c3c;
-    color: #0d0c16;
+    background-color: #EA6962;
+    color: #EBDBB2;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: steps(12);
@@ -143,37 +145,37 @@ label:focus {
 }
 
 #cpu {
-    background-color: rgb(132, 121, 224);
+    background-color: #282828;
     color: #000000;
 }
 
 #memory {
-    background-color: rgb(132, 121, 224);
+    background-color: #282828;
 }
 
 #disk {
-    background-color: rgb(132, 121, 224);
+    background-color: #282828;
 }
 
 #backlight {
-    background-color: rgb(132, 121, 224);
+    background-color: #282828;
 }
 
 #network {
-    background-color: rgb(132, 121, 224);
+    background-color: #282828;
 }
 
 #network.disconnected {
-    background-color: rgb(132, 121, 224);
+    background-color: #282828;
 }
 
 #pulseaudio {
-    background-color: rgb(132, 121, 224);
-    color: #0d0c16;
+    background-color: #282828;
+    color: #EBDBB2;
 }
 
 #pulseaudio.muted {
-    background-color: rgb(132, 121, 224);
+    background-color: #282828;
     color: #2a5c45;
 }
 
@@ -301,7 +303,7 @@ label:focus {
 }
 
 #custom-nowplaying {
-    color: #0d0c16;
+    color: #EBDBB2;
     font-family: "FiraCode";
     padding-top: 3px;
     padding-right: 3px;
