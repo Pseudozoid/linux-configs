@@ -306,5 +306,6 @@ label:focus {
     color: #EBDBB2;
     font-family: "FiraCode";
     padding-top: 3px;
-    padding-right: 3px;
+    margin-right: 10px;
 }
+

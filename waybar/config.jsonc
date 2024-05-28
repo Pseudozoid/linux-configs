@@ -1,9 +1,9 @@
 {
     "layer": "top", // Waybar at top layer
     // "position": "bottom", // Waybar position (top|bottom|left|right)
-    "height": 20, // Waybar height (to be removed for auto height)
+    "height": 24, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
-    "spacing": 4, // Gaps between modules (4px)
+    "spacing": 2, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": ["hyprland/workspaces"],
     "modules-center": ["clock"],
@@ -35,58 +35,7 @@
         "6": ""
      }
  },
-    "keyboard-state": {
-        "numlock": true,
-        "capslock": true,
-        "format": "{name} {icon}",
-        "format-icons": {
-            "locked": "",
-            "unlocked": ""
-        }
-    },
-    "sway/mode": {
-        "format": "<span style=\"italic\">{}</span>"
-    },
-    "sway/scratchpad": {
-        "format": "{icon} {count}",
-        "show-empty": false,
-        "format-icons": ["", ""],
-        "tooltip": true,
-        "tooltip-format": "{app}: {title}"
-    },
-    "mpd": {
-        "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
-        "format-disconnected": "Disconnected ",
-        "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
-        "unknown-tag": "N/A",
-        "interval": 2,
-        "consume-icons": {
-            "on": " "
-        },
-        "random-icons": {
-            "off": "<span color=\"#f53c3c\"></span> ",
-            "on": " "
-        },
-        "repeat-icons": {
-            "on": " "
-        },
-        "single-icons": {
-            "on": "1 "
-        },
-        "state-icons": {
-            "paused": "",
-            "playing": ""
-        },
-        "tooltip-format": "MPD (connected)",
-        "tooltip-format-disconnected": "MPD (disconnected)"
-    },
-    "idle_inhibitor": {
-        "format": "{icon}",
-        "format-icons": {
-            "activated": "",
-            "deactivated": ""
-        }
-    },
+
     "tray": {
         // "icon-size": 21,
         "spacing": 10
@@ -125,9 +74,9 @@
         },
         "format": "{icon} {capacity}%",
         "format-icons": ["", "", "", "", ""],
-        "format-plugged": " {capacity}%",
-        "format-charging": " {icon} {capacity}%",
-        "format-full": " {icon} {capacity}%",
+        "format-plugged": "  {icon} {capacity}%",
+        "format-charging": "  {icon} {capacity}%",
+        "format-full": "  {icon} {capacity}%",
         "format-alt": "{icon} {time}"
     },
     "battery#bat2": {
@@ -135,21 +84,20 @@
     },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": " {essid}",
-        "format-ethernet": " {ipaddr}/{cidr}",
-        "tooltip-format": "{ifname} via {gwaddr} ",
+        "format-wifi": "",
+        "format-ethernet": " {essid}",
+        "tooltip-format": "{essid}\r{gwaddr} ",
         "format-linked": " {ifname} (No IP)",
         "format-disconnected": "⚠ Disconnected",
     	"on-click": "~/.local/bin/rofi-wifi-menu.sh"
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-        "format": "{icon} {volume}% {format_source}",
-        "format-bluetooth": "{icon} {volume}% {format_source}",
-        "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": " {format_source}",
-        "format-source": " {volume}%",
-        "format-source-muted": "",
+        "format": "{icon}",
+        "tooltip-format": "{volume}%",
+        "format-bluetooth": "{icon} {volume}%",
+        "format-bluetooth-muted": " {icon}",
+        "format-muted": "",
         "format-icons": {
             "headphone": "",
             "hands-free": "",
@@ -163,10 +111,11 @@
     },
     "custom/nowplaying": {
         "interval": 1,
-	"escape": true,
-	"exec": "playerctl metadata --format \"{{ title }}\" --ignore-player=firefox",
-	"format": "🎜 {}",
+	    "escape": true,
+	    "exec": "playerctl metadata --format \"{{ title }}\" --ignore-player=firefox",
+	    "format": "🎜 {}",
         "max-length": 30,
     	"on-click": "playerctl play-pause --ignore-player=firefox" 
     }
 }
+
