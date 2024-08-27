@@ -68,7 +68,6 @@ tooltip {
     color: #cdd6f4;
 }
 
-#clock,
 #battery,
 #cpu,
 #memory,
@@ -106,7 +105,12 @@ tooltip {
 }
 
 #clock {
+	margin-top: 2px;
+    border-radius: 20px;
     background-color: #11111b;
+    color: #cdd6f4;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 #battery {
