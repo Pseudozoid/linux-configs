@@ -19,6 +19,7 @@ alias wifimenu='~/.local/bin/rofi-wifi-menu.sh'
 alias rm='rm -I -v'
 alias cp='cp -iv'
 alias mv='mv -iv'
+alias work='~/programming/scripts/pomodoro.sh'
 
 #prompt
 PS1='\[\e[33m\][\[\e[32m\]\u\[\e[33m\]@\[\e[34m\]\H\[\e[0m\] \[\e[37m\]\W\[\e[33m\]]\[\e[91m\]\\$\[\e[0m\] '
