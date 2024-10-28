@@ -1,8 +1,7 @@
 # ---pseudozoid---
 #
 # ~/.bashrc
-# 
-export PATH="$HOME/.emacs.d/bin:$PATH"
+ 
 export EDITOR="nvim"
 export SUDO_PROMPT="$(tput setaf 1 bold)Password:$(tput sgr0) "
 
@@ -14,7 +13,7 @@ export SUDO_PROMPT="$(tput setaf 1 bold)Password:$(tput sgr0) "
 alias ls='ls --color=auto --hyperlink=auto'
 alias grep='grep --color=auto'
 alias code='code --force-device-scale-factor=1.5'
-alias start='scripts/starthyp.sh'
+alias start='exec Hyprland'
 alias wifimenu='~/.local/bin/rofi-wifi-menu.sh'
 alias rm='rm -I -v'
 alias cp='cp -iv'
@@ -34,3 +33,5 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+
+export PATH=$PATH:/home/pseudozoid/.spicetify
