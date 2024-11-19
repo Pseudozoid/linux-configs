@@ -6,8 +6,7 @@
 }
 
 window#waybar {
-    background-color: transparent;
-    border-bottom: 2px solid #1e1e2e;
+    background-color: #191724;
 }
 
 #window,
@@ -15,7 +14,7 @@ window#waybar {
     margin-top: 2px;
     margin-left: 10px;
     border-radius: 20px;
-    background-color: #11111b;
+    background-color: #191724;
     padding: 5px;
 }
 
@@ -33,20 +32,8 @@ button:hover {
 #workspaces button {
     border-radius: 0;
     background-color: transparent;
-    color: #cdd6f4;
+    color: #9ccfd8;
     padding: 5px 8px;
-}
-
-#workspaces button:first-child {
-    border-radius: 20px 0 0 20px; /* Round only the left side for the first button */
-}
-
-#workspaces button:last-child {
-    border-radius: 0 20px 20px 0; /* Round only the right side for the last button */
-}
-
-#workspaces button:not(:first-child):not(:last-child) {
-    border-radius: 0; /* Ensure middle buttons have no rounding */
 }
 
 #workspaces button:hover {
@@ -65,7 +52,7 @@ button:hover {
 
 tooltip {
     background-color: #11111b;
-    color: #cdd6f4;
+    color: #9ccfd8;
 }
 
 #battery,
@@ -85,13 +72,10 @@ tooltip {
 #mpd,
 #custom-nowplaying,
 #custom-semcounter {
-    margin-top: 2px;
-    border-radius: 20px;
-    background-color: #11111b;
-    color: #cdd6f4;
-    padding-left: 10px;
-    padding-right: 10px;
-    margin-right: 10px;
+    margin: 0;
+    background-color: transparent;
+    color: #9ccfd8;
+    padding: 0 10px;
 }
 
 /* If workspaces is the leftmost module, omit left margin */
@@ -108,7 +92,7 @@ tooltip {
 	margin-top: 2px;
     border-radius: 20px;
     background-color: #11111b;
-    color: #cdd6f4;
+    color: #9ccfd8;
     padding-left: 10px;
     padding-right: 10px;
 }
@@ -116,11 +100,11 @@ tooltip {
 #battery {
     margin-right: 0;
     background-color: #11111b;
-    color: #cdd6f4;
+    color: #9ccfd8;
 }
 
 #battery.charging, #battery.plugged {
-    color: #cdd6f4;
+    color: #9ccfd8;
     background-color: #11111b;
 }
 
@@ -134,7 +118,7 @@ tooltip {
 /* Using steps() instead of linear as a timing function to limit cpu usage */
 #battery.critical:not(.charging) {
     background-color: #EA6962;
-    color: #cdd6f4;
+    color: #9ccfd8;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: steps(12);
@@ -173,7 +157,7 @@ label:focus {
 
 #pulseaudio {
     background-color: #11111b;
-    color: #cdd6f4;
+    color: #9ccfd8;
 }
 
 #pulseaudio.muted {
@@ -192,7 +176,7 @@ label:focus {
 
 #custom-media {
     background-color: #66cc99;
-    color: #2a5c45;
+    color: #9ccfd8;
     min-width: 100px;
 }
 
@@ -305,7 +289,7 @@ label:focus {
 }
 
 #custom-nowplaying {
-    color: #cdd6f4;
+    color: #9ccfd8;
     font-family: "FiraCode";
 }
 
