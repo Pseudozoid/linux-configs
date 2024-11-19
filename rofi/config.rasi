@@ -1,6 +1,6 @@
 configuration {
     modes: "window,drun,run,ssh";
-    font: "FiraCode 12";
+    font: "FiraCode 11";
     display-drun: "Applications";
 
   timeout {
@@ -17,7 +17,7 @@ configuration {
 
 * {
     selected-normal-foreground:  rgba ( 13, 12, 22, 100 %);
-    foreground:                  rgba (205, 214, 244, 100 %);      // Border, text and all that 
+    foreground:                  rgba ( 156, 207, 216, 100%);      // Border, text and all that 
     normal-foreground:           @foreground;
     alternate-normal-background: rgba ( 0, 0, 0, 0 % );
     red:                         rgba ( 220, 50, 47, 100 % );
@@ -34,10 +34,10 @@ configuration {
     alternate-normal-foreground: @foreground;
     normal-background:           rgba ( 0, 0, 0, 0 % );
     lightfg:                     rgba ( 88, 104, 117, 100 % );
-    selected-normal-background:  rgba (205, 214, 244, 100 %);      // Selection color
+    selected-normal-background:  rgba ( 156, 207, 216, 100 %);      // Selection color
     border-color:                @foreground;
     spacing:                     2;
-    separatorcolor:              rgba (166, 227, 161, 100 %);      // Seperator (duh)
+    separatorcolor:              rgba ( 246, 193, 119, 100%);      // Seperator (duh)
     urgent-background:           rgba ( 0, 0, 0, 0 % );
     selected-urgent-background:  rgba ( 255, 160, 160, 100 % );     
     alternate-urgent-foreground: @urgent-foreground;
@@ -48,7 +48,7 @@ configuration {
 }
 window {
     background-color: rgba(13, 12, 22, 100 %);
-    border:           3;
+    border:           2;
     padding:          5;
     width:           60%;
 }
@@ -66,7 +66,7 @@ textbox {
 }
 listview {
     fixed-height: 0;
-    border:       2px dash 0px 0px ;
+    border:       1px dash 0px 0px ;
     border-color: @separatorcolor;
     spacing:      2px ;
     scrollbar:    false;
