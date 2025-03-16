@@ -71,7 +71,7 @@ tooltip {
 #scratchpad,
 #mpd,
 #custom-nowplaying,
-#custom-semcounter {
+#custom-todo {
     margin: 0;
     background-color: transparent;
     color: #9ccfd8;
@@ -91,7 +91,7 @@ tooltip {
 #clock {
 	margin-top: 2px;
     border-radius: 20px;
-    background-color: #11111b;
+    background-color: transparent;
     color: #9ccfd8;
     padding-left: 10px;
     padding-right: 10px;
@@ -99,13 +99,13 @@ tooltip {
 
 #battery {
     margin-right: 0;
-    background-color: #11111b;
+    background-color: transparent;
     color: #9ccfd8;
 }
 
 #battery.charging, #battery.plugged {
     color: #9ccfd8;
-    background-color: #11111b;
+    background-color: transparent;
 }
 
 @keyframes blink {
@@ -148,20 +148,20 @@ label:focus {
 }
 
 #network {
-    background-color: #11111b;
+    background-color: transparent;
 }
 
 #network.disconnected {
-    background-color: #11111b;
+    background-color: transparent;
 }
 
 #pulseaudio {
-    background-color: #11111b;
+    background-color: transparent;
     color: #9ccfd8;
 }
 
 #pulseaudio.muted {
-    background-color: #11111b;
+    background-color: transparent;
     color: #2a5c45;
 }
 

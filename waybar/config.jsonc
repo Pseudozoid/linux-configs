@@ -7,7 +7,7 @@
     // Choose the order of the modules
     "modules-left": ["hyprland/workspaces"],
     "modules-center": ["clock"],
-    "modules-right": ["custom/nowplaying", "custom/semcounter", "pulseaudio", "network", "battery"],
+    "modules-right": ["custom/nowplaying", "custom/todo", "pulseaudio", "network", "battery"],
     // Modules configuration
     "hyprland/workspaces": {
         "disable-scroll": true,
@@ -22,7 +22,6 @@
          "5": "",
          "6": "",
          "urgent": "",
-         "focused": "",
          "default": ""
      },
      
@@ -117,10 +116,8 @@
         "max-length": 30,
     	"on-click": "playerctl play-pause --ignore-player=firefox" 
     },
-
-	"custom/semcounter": {
-		"exec": "/home/pseudozoid/programming/scripts/semcounter.sh",
-		"format": " {}"
-	}
+    "custom/todo": {
+      "format": " ",
+      "on-click": "kitty -e nvim ~/notes/journal/agenda.md",
+    }
 }
-
