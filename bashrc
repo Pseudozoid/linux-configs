@@ -21,11 +21,11 @@ alias mv='mv -iv'
 alias update='sudo pacman -Syu'
 alias nf='neofetch'
 alias todo='nvim ~/notes/journal/agenda.md'
-alias hyprconf='nvim ~/.config/hypr/hyprland.conf'
+alias hyprconf='nvim ~/.config/hypr/'
 alias zoid='~/projects/shell/zoid'
 
 #prompt
-PS1='\[\e[35m\][\[\e[33m\]\u\[\e[35m\]@\[\e[34m\]\H\[\e[0m\] \[\e[37m\]\W\[\e[35m\]]\[\e[91m\]\\$\[\e[0m\] '
+eval "$(starship init bash)"
 
 #additional features
 source /usr/share/doc/pkgfile/command-not-found.bash
