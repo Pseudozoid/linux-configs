@@ -1,12 +1,13 @@
-{
+[{
     "layer": "top", // Waybar at top layer
+    "output": "eDP-1",
     // "position": "bottom", // Waybar position (top|bottom|left|right)
     "height": 24, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
     "spacing": 2, // Gaps between modules (4px)
     // Choose the order of the modules
-    "modules-left": ["hyprland/workspaces"],
-    "modules-center": ["clock"],
+    "modules-left": ["clock"],
+    "modules-center": ["hyprland/workspaces"],
     "modules-right": ["custom/nowplaying", "custom/todo", "pulseaudio", "network", "battery"],
     // Modules configuration
     "hyprland/workspaces": {
@@ -15,56 +16,28 @@
         "warp-on-scroll": false,
         "format": "{icon}",
         "format-icons": {
-         "1": "",
-         "2": "",
-         "3": "",
-         "4": "",
-         "5": "",
-         "6": "",
-         "urgent": "",
-         "default": ""
+        "urgent": "",
+        "active": "",
+        "default": ""
      },
      
      "persistent-workspaces":{
-        "1": "",
-        "2": "",
-        "3": "",
-        "4": "",
-        "5": "",
-        "6": ""
+        "1": "",
+        "2": "",
+        "3": "",
+        "4": "",
+        "5": "",
+        "6": ""
      }
  },
 
-    "tray": {
-        // "icon-size": 21,
-        "spacing": 10
-    },
     "clock": {
         // "timezone": "America/New_York",
-        "format": " {:%I:%M %p}",
+        "format": " It's {:%A, %d %B %Y, %I:%M %p}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%d-%m-%Y}"
     },
-    "cpu": {
-        "format": "{usage}% ",
-        "tooltip": false
-    },
-    "memory": {
-        "format": " {}%"
-    },
-    "temperature": {
-        // "thermal-zone": 2,
-        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
-        "critical-threshold": 80,
-        // "format-critical": "{temperatureC}°C {icon}",
-        "format": "{temperatureC}°C {icon}",
-        "format-icons": ["", "", ""]
-    },
-    "backlight": {
-        // "device": "acpi_video1",
-        "format": "{percent}% {icon}",
-        "format-icons": ["", "", "", "", "", "", "", "", ""]
-    },
+    
     "battery": {
         "states": {
             // "good": 95,
@@ -120,4 +93,101 @@
       "format": " ",
       "on-click": "kitty -e nvim ~/notes/journal/agenda.md",
     }
-}
+},
+
+{
+    "name": "vgamonitor",
+    "layer": "top", // Waybar at top layer
+    "output": "HDMI-A-1",
+    // "position": "bottom", // Waybar position (top|bottom|left|right)
+    // "width": 1280, // Waybar width
+    "spacing": 2, // Gaps between modules (4px)
+    // Choose the order of the modules
+    "modules-left": ["clock"],
+    "modules-center": ["hyprland/workspaces"],
+    "modules-right": ["custom/nowplaying", "custom/todo", "battery"],
+    // Modules configuration
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "warp-on-scroll": false,
+        "format": "{icon}",
+        "format-icons": {
+        "urgent": "",
+        "active": "",
+        "default": ""
+     },
+     
+     "persistent-workspaces":{
+        "1": "",
+        "2": "",
+        "3": "",
+        "4": "",
+        "5": "",
+        "6": ""
+     }
+ },
+
+    "clock": {
+        // "timezone": "America/New_York",
+        "format": "It's {:%A, %d %B %Y, %I:%M %p}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%d-%m-%Y}"
+    },
+   
+    "battery": {
+        "states": {
+            // "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon} {capacity}%",
+        "format-icons": ["", "", "", "", ""],
+        "format-plugged": "  {icon} {capacity}%",
+        "format-charging": "  {icon} {capacity}%",
+        "format-full": "  {icon} {capacity}%",
+        "format-alt": "{icon} {time}"
+    },
+    "battery#bat2": {
+        "bat": "BAT2"
+    },
+    "network": {
+        // "interface": "wlp2*", // (Optional) To force the use of this interface
+        "format-wifi": "",
+        "format-ethernet": " {essid}",
+        "tooltip-format": "{essid}\r{gwaddr} ",
+        "format-linked": " {ifname} (No IP)",
+        "format-disconnected": "⚠ Disconnected",
+    	"on-click": "~/.local/bin/rofi-wifi-menu.sh"
+    },
+    "pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+        "format": "{icon}",
+        "tooltip-format": "{volume}%",
+        "format-bluetooth": "{icon} {volume}%",
+        "format-bluetooth-muted": " {icon}",
+        "format-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+    "custom/nowplaying": {
+        "interval": 1,
+	    "escape": true,
+	    "exec": "playerctl metadata --format \"{{ title }}\" --ignore-player=firefox",
+	    "format": "🎜 {}",
+        "max-length": 30,
+    	"on-click": "playerctl play-pause --ignore-player=firefox" 
+    },
+    "custom/todo": {
+      "format": " ",
+      "on-click": "kitty -e nvim ~/notes/journal/agenda.md",
+    }
+}]
