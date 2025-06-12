@@ -48,9 +48,11 @@ configuration {
 }
 window {
     background-color: rgba(13, 12, 22, 100 %);
-    border:           2;
+    border:           3;
+    border-radius:    8;
     padding:          5;
-    width:           60%;
+    width:           40%;
+    height:          50%;
 }
 mainbox {
     border:  0;
@@ -68,13 +70,13 @@ listview {
     fixed-height: 0;
     border:       1px dash 0px 0px ;
     border-color: @separatorcolor;
-    spacing:      2px ;
+    spacing:      1px ;
     scrollbar:    false;
     padding:      1px 0px 0px ;
 }
 element {
     border:  0;
-    padding: 1px ;
+    padding: 10px ;
 }
 element-text {
     background-color: inherit;
