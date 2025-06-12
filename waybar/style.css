@@ -11,13 +11,11 @@ window#waybar {
 
 #window,
 #workspaces {
-    margin-top: 2px;
-    margin-left: 10px;
-    margin-bottom: 4px;
+    margin: 5px 5px;
     border: 2px solid #9ccfd8;
     border-radius: 18px;
     background-color: #191919;
-    padding: 5px;
+    padding: 5px 5px;
 }
 
 button {
@@ -38,15 +36,25 @@ button:hover {
     padding: 5px 8px;
 }
 
+#workspaces button:first-child {
+    border-radius: 20px 0 0 20px; /* Round only the left side for the first button */
+}
+
+#workspaces button:last-child {
+    border-radius: 0 20px 20px 0; /* Round only the right side for the last button */
+}
+
+#workspaces button:not(:first-child):not(:last-child) {
+    border-radius: 0; /* Ensure middle buttons have no rounding */
+}
 #workspaces button:hover {
     background:rgba(192, 170, 132, 0.1);
     box-shadow: inherit;
     text-shadow: inherit;
 }
 
-
 #workspaces button.urgent {
-    background-color: #EA6962;
+    background-color: #ff355b;
 }
 
 tooltip {
@@ -54,7 +62,7 @@ tooltip {
     color: #9ccfd8;
 }
 
-#battery,
+#clock,
 #cpu,
 #memory,
 #disk,
@@ -71,10 +79,10 @@ tooltip {
 #mpd,
 #custom-nowplaying,
 #custom-todo {
-    margin: 0;
+    margin: 8px 5px;
     background-color: transparent;
     color: #9ccfd8;
-    padding: 0 10px;
+    padding: 0px 4px;
 }
 
 /* If workspaces is the leftmost module, omit left margin */
@@ -87,24 +95,20 @@ tooltip {
     margin-right: 0;
 }
 
-#clock {
-	margin-top: 2px;
-    border-radius: 20px;
-    background-color: transparent;
-    color: #9ccfd8;
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
 #battery {
-    margin-right: 0;
-    background-color: transparent;
-    color: #9ccfd8;
+    margin: 8px 5px; 
+    background-color: #9ccfd8;
+    color: #191919;
+    border-radius: 18px;
+    padding: 0px 10px;
 }
 
 #battery.charging, #battery.plugged {
-    color: #9ccfd8;
-    background-color: transparent;
+    margin: 8px 5px; 
+    background-color: #b6e875;
+    color: #191919;
+    border-radius: 18px;
+    padding: 0px 10px;
 }
 
 @keyframes blink {
@@ -116,7 +120,11 @@ tooltip {
 
 /* Using steps() instead of linear as a timing function to limit cpu usage */
 #battery.critical:not(.charging) {
-    background-color: #EA6962;
+    margin: 8px 5px; 
+    background-color: #ff355b;
+    color: #191919;
+    border-radius: 18px;
+    padding: 0px 10px;
     color: #9ccfd8;
     animation-name: blink;
     animation-duration: 0.5s;
@@ -318,5 +326,6 @@ label:focus {
 #custom-nowplaying {
     color: #9ccfd8;
     font-family: "FiraCode";
+    padding-top: 3px; 
 }
 
