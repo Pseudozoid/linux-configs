@@ -107,6 +107,12 @@ tooltip {
     margin-right: 0;
 }
 
+#custom-semcounter {
+    margin: 8px 5px; 
+    color: #b6e875;
+    padding: 0px 0px;
+}
+
 #battery {
     margin: 8px 5px; 
     background-color: #9ccfd8;
@@ -340,4 +346,5 @@ label:focus {
     font-family: "FiraCode";
     padding-top: 3px; 
 }
+
 
