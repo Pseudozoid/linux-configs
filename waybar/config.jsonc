@@ -91,12 +91,12 @@
     },
     "custom/todo": {
       "format": " ",
-      "on-click": "kitty -e nvim ~/notes/journal/agenda.md"
+      "on-click": "kitty -e nvim ~/notes/journal/personal/agenda.md"
     },
     "custom/semcounter": {
       "exec": "/home/pseudozoid/programming/scripts/semcounter.sh",
       "format": " {}",
-      "interval": 86400,
+      "interval": 86400
     }
 }]
 

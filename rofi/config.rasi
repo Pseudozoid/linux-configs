@@ -1,7 +1,7 @@
 configuration {
     modes: "window,drun,run,ssh";
-    font: "FiraCode 11";
-    display-drun: "Applications";
+    font: "FiraCode 10";
+    display-drun: "launch";
 
   timeout {
       action: "kb-cancel";
@@ -17,7 +17,7 @@ configuration {
 
 * {
     selected-normal-foreground:  rgba ( 13, 12, 22, 100 %);
-    foreground:                  rgba ( 156, 207, 216, 100%);      // Border, text and all that 
+    foreground:                  rgba (235, 219, 178, 100 %);      // Border, text and all that 
     normal-foreground:           @foreground;
     alternate-normal-background: rgba ( 0, 0, 0, 0 % );
     red:                         rgba ( 220, 50, 47, 100 % );
@@ -34,7 +34,7 @@ configuration {
     alternate-normal-foreground: @foreground;
     normal-background:           rgba ( 0, 0, 0, 0 % );
     lightfg:                     rgba ( 88, 104, 117, 100 % );
-    selected-normal-background:  rgba ( 156, 207, 216, 100 %);      // Selection color
+    selected-normal-background:  rgba (235, 219, 178, 100 %);      // Selection color
     border-color:                @foreground;
     spacing:                     2;
     separatorcolor:              rgba ( 246, 193, 119, 100%);      // Seperator (duh)
@@ -47,9 +47,9 @@ configuration {
     selected-active-background:  rgba (243, 139, 168, 100 %);       //
 }
 window {
-    background-color: rgba(13, 12, 22, 100 %);
-    border:           3;
-    border-radius:    8;
+    background-color: rgba (13, 12, 22, 100 %);
+    border:           0;
+    border-radius:    0;
     padding:          5;
     width:           40%;
     height:          50%;
@@ -64,7 +64,7 @@ message {
     padding:      1px ;
 }
 textbox {
-    text-color: @foreground;
+    text-color: rgba (182, 100, 103, 100 %);
 }
 listview {
     fixed-height: 0;
@@ -76,7 +76,7 @@ listview {
 }
 element {
     border:  0;
-    padding: 10px ;
+    padding: 2px ;
 }
 element-text {
     background-color: inherit;
@@ -147,7 +147,7 @@ entry {
 }
 prompt {
     spacing:    0;
-    text-color: @normal-foreground;
+    text-color: rgba (182, 100, 103, 100 %);
 }
 inputbar {
     children:   [ prompt,textbox-prompt-colon,entry,case-indicator ];

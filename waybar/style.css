@@ -12,8 +12,8 @@ window#waybar {
 #window,
 #workspaces {
     margin: 5px 5px;
-    border: 2px solid #9ccfd8;
-    border-radius: 20px;
+    border: 1px solid #ebdbb2;
+    border-radius: 0px;
     background-color: #191919;
     padding: 5px 5px;
 }
@@ -32,26 +32,29 @@ button:hover {
 #workspaces button {
     border-radius: 0;
     background-color: transparent;
-    color: #9ccfd8;
+    color: #ebdbb2
+;
     padding: 4px 20px;
 }
 
 #workspaces button.active {
-    background-color: #9ccfd8;
+    background-color: #ebdbb2
+;
     color: #191919;
 }
-
+/*
 #workspaces button:first-child {
-    border-radius: 20px 0 0 20px; /* Round only the left side for the first button */
+    border-radius: 20px 0 0 20px; // Round only the left side for the first button 
 }
 
 #workspaces button:last-child {
-    border-radius: 0 20px 20px 0; /* Round only the right side for the last button */
+    border-radius: 0 20px 20px 0; // Round only the right side for the last button 
 }
 
 #workspaces button:not(:first-child):not(:last-child) {
-    border-radius: 0; /* Ensure middle buttons have no rounding */
-}
+    border-radius: 0; // Ensure middle buttons have no rounding
+} 
+*/
 #workspaces button:hover {
     background:rgba(192, 170, 132, 0.1);
     box-shadow: inherit;
@@ -60,7 +63,8 @@ button:hover {
 
 #workspaces button.active:hover {
     background:rgba(192, 170, 132, 0.1);
-    color: #9ccfd8;
+    color: #ebdbb2
+;
     box-shadow: inherit;
     text-shadow: inherit;
 }
@@ -71,7 +75,8 @@ button:hover {
 
 tooltip {
     background-color: #11111b;
-    color: #9ccfd8;
+    color: #ebdbb2
+;
 }
 
 #clock,
@@ -93,7 +98,8 @@ tooltip {
 #custom-todo {
     margin: 8px 5px;
     background-color: transparent;
-    color: #9ccfd8;
+    color: #ebdbb2
+;
     padding: 0px 4px;
 }
 
@@ -109,13 +115,14 @@ tooltip {
 
 #custom-semcounter {
     margin: 8px 5px; 
-    color: #b6e875;
+    color: #98971a;
     padding: 0px 0px;
 }
 
 #battery {
     margin: 8px 5px; 
-    background-color: #9ccfd8;
+    background-color: #ebdbb2
+;
     color: #191919;
     border-radius: 18px;
     padding: 0px 10px;
@@ -123,7 +130,7 @@ tooltip {
 
 #battery.charging, #battery.plugged {
     margin: 8px 5px; 
-    background-color: #b6e875;
+    background-color: #98971a;
     color: #191919;
     border-radius: 18px;
     padding: 0px 10px;
@@ -139,11 +146,12 @@ tooltip {
 /* Using steps() instead of linear as a timing function to limit cpu usage */
 #battery.critical:not(.charging) {
     margin: 8px 5px; 
-    background-color: #ff355b;
+    background-color: #cc241d;
     color: #191919;
     border-radius: 18px;
     padding: 0px 10px;
-    color: #9ccfd8;
+    color: #ebdbb2
+;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: steps(12);
@@ -182,7 +190,8 @@ label:focus {
 
 #pulseaudio {
     background-color: transparent;
-    color: #9ccfd8;
+    color: #ebdbb2
+;
 }
 
 #pulseaudio.muted {
@@ -229,7 +238,8 @@ label:focus {
 
 #custom-media {
     background-color: #66cc99;
-    color: #9ccfd8;
+    color: #ebdbb2
+;
     min-width: 100px;
 }
 
@@ -342,7 +352,8 @@ label:focus {
 }
 
 #custom-nowplaying {
-    color: #9ccfd8;
+    color: #ebdbb2
+;
     font-family: "FiraCode";
     padding-top: 3px; 
 }
