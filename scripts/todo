@@ -1,0 +1,53 @@
+#!/usr/bin/env python3
+
+from pathlib import Path
+import sys
+import subprocess
+
+dir = Path.home() / 'notes/journal/personal/agenda.md'
+archive_dir = Path.home() / 'notes/journal/00_archive/agenda_archive'
+
+def open_agenda():
+    try:
+        subprocess.run(["nvim", dir])
+    except FileNotFoundError:
+        print(f"{dir} not found!")
+
+def archive():
+    try:
+        with open(dir, 'r') as file:
+            contents = file.readlines()
+            
+            first_line = contents[0].strip()           
+            if first_line.startswith('## '):
+                date_str = first_line[3:]
+            else:
+                print("Invalid format!")
+                exit()
+
+            file_name = date_str.replace(' ', '_') + '.md'
+            
+            archive_dir.mkdir(parents=True, exist_ok=True)
+
+            archive_path = archive_dir / file_name
+            with open(archive_path, 'w') as out_file:
+                out_file.writelines(contents)
+
+            print(f"Agenda saved as {archive_path}")
+
+    except FileNotFoundError:
+        print(f"{dir} not found")
+    except Exception as e:
+        print(f"An error occurred: {e}")
+
+
+def main():
+    if len(sys.argv) == 1:
+        open_agenda()
+    elif len(sys.argv) == 2 and sys.argv[1] == "-a":
+        archive()
+    else:
+        print("Usage: todo [-a]")
+
+if __name__ == "__main__":
+    main()
