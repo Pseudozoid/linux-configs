@@ -73,7 +73,7 @@
         "format-icons": {
             "headphone": "",
             "hands-free": "",
-            "headset": "",
+            "headset": "",
             "phone": "",
             "portable": "",
             "car": "",
@@ -91,7 +91,10 @@
     },
     "custom/todo": {
       "format": " ",
-      "on-click": "kitty -e nvim ~/notes/journal/personal/agenda.md"
+      "return-type": "json",
+      "interval": 5,
+      "exec": "/home/pseudozoid/programming/scripts/todo-tooltip.sh",
+      "on-click": "kitty -e nvim /home/pseudozoid/notes/journal/personal/agenda.md"
     },
     "custom/semcounter": {
       "exec": "/home/pseudozoid/programming/scripts/semcounter.sh",
