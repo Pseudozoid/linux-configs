@@ -28,6 +28,7 @@ return {
       "query",
       "vimdoc",
       "c",
+      "java",
     })
 
     vim.api.nvim_create_autocmd("FileType", {
