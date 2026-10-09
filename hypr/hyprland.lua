@@ -194,7 +194,6 @@ hl.bind(mainMod .. " + SHIFT + Print", hl.dsp.exec_cmd("grim -l 0"))
 hl.bind(mainMod .. " + period", hl.dsp.exec_cmd("rofimoji -a type -s ask"))
 hl.bind(mainMod .. " + SHIFT + L", hl.dsp.exec_cmd("hyprlock"))
 hl.bind(mainMod .. " + SHIFT + T", hl.dsp.exec_cmd("~/programming/scripts/hyprsunset.sh"))
-hl.bind(mainMod .. " + SHIFT + M", hl.dsp.exec_cmd("~/programming/scripts/lockin.sh"))
 
 hl.bind(mainMod .. " + left",  hl.dsp.focus({ direction = "left" }))
 hl.bind(mainMod .. " + right", hl.dsp.focus({ direction = "right" }))
