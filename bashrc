@@ -13,6 +13,7 @@ export MANPAGER="nvim +Man!"
 alias ls='ls --color=auto --hyperlink=auto'
 alias grep='grep --color=auto'
 alias start='start-hyprland'
+alias gnome='XDG_CURRENT_DESKTOP=GNOME XDG_SESSION_DESKTOP=gnome gnome-session --no-reexec'
 alias wifimenu='~/.local/bin/rofi-wifi-menu.sh'
 alias rm='rm -I -v'
 alias cp='cp -iv'
@@ -44,3 +45,6 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 #rust
 . "$HOME/.cargo/env"
+
+# Added by Antigravity CLI installer
+export PATH="/home/pseudozoid/.local/bin:$PATH"
