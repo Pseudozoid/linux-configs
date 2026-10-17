@@ -16,11 +16,9 @@ keymap.set("n", "<leader>j", "<C-w>j", { desc = "Move focus to the lower window"
 keymap.set("n", "<leader>k", "<C-w>k", { desc = "Move focus to the upper window" })
 keymap.set("n", "<leader>l", "<C-w>l", { desc = "Move focus to the right window" })
 
-keymap.set("n", "<leader>to", "<cmd>tabnew<CR>", { desc = "Open new tab" }) -- open new tab
-keymap.set("n", "<leader>tx", "<cmd>tabclose<CR>", { desc = "Close current tab" }) -- close current tab
-keymap.set("n", "<leader>tn", "<cmd>tabn<CR>", { desc = "Go to next tab" }) --  go to next tab
-keymap.set("n", "<leader>tp", "<cmd>tabp<CR>", { desc = "Go to previous tab" }) --  go to previous tab
-keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer in new tab" }) --  move current buffer to new tab
+-- toggleterm (floating)
+keymap.set("n", "<leader>t", "<cmd>ToggleTerm<CR>", { desc = "Toggle floating terminal" })
+keymap.set("t", "<Esc>", [[<C-\><C-n>]], { desc = "Exit terminal mode" })
 
 -- copypaste fix
 keymap.set("v", "p", '"_dP', { desc = "Paste over text without losing copied item" })
